@@ -13,27 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/about', function () {
-     return view('about');
-});
-Route::get('/films', function () {
-    return view('films');
-});
-Route::get('/film1', function () {
-    return view('film1');
-});
-Route::get('/film2', function () {
-    return view('film2');
-});
-Route::get('/film3', function () {
-    return view('film3');
-});
-Route::get('/contacts', function () {
-    return view('contacts');
-});
-Route::get('/maintenance', function () {
-    return view('maintenance');
-});
+Route::get('/','ApiController@indexAction' );
+Route::get('/about','ApiController@aboutAction' );
+Route::get('/films','ApiController@filmsAction' );
+Route::get('/film1','ApiController@film1Action' );
+Route::get('/film2','ApiController@film2Action' );
+Route::get('/film3','ApiController@film3Action' );
+Route::get('/contacts','ApiController@contactsAction' );
+Route::get('/maintenance','ApiController@maintenanceAction' );
