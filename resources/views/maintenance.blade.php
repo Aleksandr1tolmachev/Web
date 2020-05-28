@@ -1,3 +1,4 @@
+@extends('layouts.header')
 <html>
 <head>
 <title>Фильмы</title>
@@ -8,26 +9,29 @@
 	<div class="tail-bottom">
 		<div id="main">
 <!-- шапка -->
-			<div id="header">
-				<div class="row-1">
-					<div class="fleft"><a href="index.html">Фильмы</a></div>
-					<ul>
-						<li><a href="index.html"><img src="images/icon1.gif" alt="" /></a></li>
-						<li><a href="contacts.html"><img src="images/icon2.gif" alt="" /></a></li>
-						<li><a href="maintenance.html"><img src="images/icon3-act.gif" alt="" /></a></li>
-					</ul>
-				</div>
-				<div class="row-2">
-					<ul>
-            <li><a href="index.html" >Главная</a></li>
-            <li><a href="about.html">О сайте</a></li>
-            <li><a href="films.html">Фильмы</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-            <li class="last"><a href="maintenance.html" class="active">Содержание</a></li>
-					</ul>
-				</div>
-			</div>
+@section('header')
+<div id="header">
+  <div class="row-1">
+    <div class="fleft"><a href="/">Фильмы</a></div>
+    <ul>
+      <li><a href="/"><img src="images/icon1.gif" alt="" /></a></li>
+      <li><a href="/contacts"><img src="images/icon2.gif" alt="" /></a></li>
+      <li><a href="/maintenance"><img src="images/icon3-act.gif" alt="" /></a></li>
+    </ul>
+  </div>
+  <div class="row-2">
+    <ul>
+      <li><a href="/" >Главная</a></li>
+      <li><a href="/about">О сайте</a></li>
+      <li><a href="/films">Фильмы</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+      <li class="last"><a href="/maintenance" class="active">Содержание</a></li>
+    </ul>
+  </div>
+</div>
+			@endsection
 <!-- основа -->
+@section('content')
 			<div id="content"><div class="ic">More Website Templates at TemplateMonster.com!</div>
 				<div class="line-hor"></div>
 				<div class="box">
@@ -67,3 +71,4 @@
 </div>
 </body>
 </html>
+@endsection

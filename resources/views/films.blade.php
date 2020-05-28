@@ -1,3 +1,4 @@
+@extends('layouts.header')
 <html>
 <head>
 <title>Фильмы</title>
@@ -8,26 +9,29 @@
 	<div class="tail-bottom">
 		<div id="main">
 <!-- шапка -->
-			<div id="header">
-				<div class="row-1">
-					<div class="fleft"><a href="index.html">Фильмы</span></a></div>
-					<ul>
-						<li><a href="index.html"><img src="images/icon1.gif" alt="" /></a></li>
-						<li><a href="contacts.html"><img src="images/icon2.gif" alt="" /></a></li>
-						<li><a href="maintenance.html"><img src="images/icon3.gif" alt="" /></a></li>
-					</ul>
-				</div>
-				<div class="row-2">
-					<ul>
-						<li><a href="index.html" >Главная</a></li>
-						<li><a href="about.html">О сайте</a></li>
-						<li><a href="films.html" class="active">Фильмы</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
-						<li class="last"><a href="maintenance.html">Содержание</a></li>
-					</ul>
-				</div>
-			</div>
+@section('header')
+<div id="header">
+	<div class="row-1">
+		<div class="fleft"><a href="/">Фильмы</a></div>
+		<ul>
+			<li><a href="/"><img src="images/icon1.gif" alt="" /></a></li>
+			<li><a href="/contacts"><img src="images/icon2.gif" alt="" /></a></li>
+			<li><a href="/maintenance"><img src="images/icon3.gif" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="row-2">
+		<ul>
+			<li><a href="/" >Главная</a></li>
+			<li><a href="/about">О сайте</a></li>
+			<li><a href="/films" class="active">Фильмы</a></li>
+			<li><a href="/contacts">Контакты</a></li>
+			<li class="last"><a href="/maintenance">Содержание</a></li>
+		</ul>
+	</div>
+</div>
+			@endsection
 <!-- основа -->
+@section('content')
 			<div id="content"><div class="ic"></div>
 				<div class="line-hor"></div>
 				<div class="box">
@@ -43,13 +47,13 @@
 				<div class="content">
 					<h3>Фильмы </span></h3>
 					<ul class="list">
-						<li><a href="film1.html"><img src="images/1page-img2.png" alt="" /><a href="film1.html">Бладшот</a><br />
+						<li><a href="/film1"><img src="images/1page-img2.png" alt="" /><a href="/film1">Бладшот</a><br />
 					Настоящее имя – Рэй Гаррисон.Морской пехотинец, погибший вместе с женой,а затем вернувшийся к жизни благодаря технологиям компании «Возрождение души».<br />
 					</li>
-						<li><a href="film2.html"><img src="images/1page-img3.png" alt="" /><a href="film2.html">Соник в кино</a><br />
+						<li><a href="/film2"><img src="images/1page-img3.png" alt="" /><a href="/film2">Соник в кино</a><br />
 					Соник — внеземной синий ёж, способный бегать со сверхзвуковой скоростью.<br />
 						</li>
-						<li><a href="film3.html"><img src="images/1page-img4.png" alt="" /><a href="film3.html">Хищные птицы: Потрясающая история Харли Квинн</a><br />
+						<li><a href="/film3"><img src="images/1page-img4.png" alt="" /><a href="/film3">Хищные птицы: Потрясающая история Харли Квинн</a><br />
 				Героями фильма «Хищные птицы» стали несколько юных особ, чьей отважности и смелости можно только позавидовать. Четыре девушки нашли в себе ресурсы выступить против главы преступного мира и оказать ему сопротивление.<br />
 						</li>
 					</ul>
@@ -70,3 +74,4 @@
 			</div>
 			</body>
 			</html>
+@endsection

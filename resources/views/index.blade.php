@@ -1,3 +1,4 @@
+@extends('layouts.header')
 <html xml:lang="en" lang="en">
 <head>
 <title>Фильмы</title>
@@ -8,25 +9,28 @@
 	<div class="tail-bottom">
 		<div id="main">
 <!-- шапка -->
-			<div id="header">
-				<div class="row-1">
-					<div class="fleft"><a href="/">Фильмы</a></div>
-					<ul>
-						<li><a href="/"><img src="images/icon1-act.gif" alt="" /></a></li>
-						<li><a href="/contacts"><img src="images/icon2.gif" alt="" /></a></li>
-						<li><a href="/maintenance"><img src="images/icon3.gif" alt="" /></a></li>
-					</ul>
-				</div>
-				<div class="row-2">
-					<ul>
-						<li><a href="/" class="active">Главная</a></li>
-						<li><a href="/about">О сайте</a></li>
-						<li><a href="/films">Фильмы</a></li>
-						<li><a href="/contacts">Контакты</a></li>
-						<li class="last"><a href="/maintenance">Содержание</a></li>
-					</ul>
-				</div>
-			</div>
+@section('header')
+<div id="header">
+  <div class="row-1">
+    <div class="fleft"><a href="/">Фильмы</a></div>
+    <ul>
+      <li><a href="/"><img src="images/icon1-act.gif" alt="" /></a></li>
+      <li><a href="/contacts"><img src="images/icon2.gif" alt="" /></a></li>
+      <li><a href="/maintenance"><img src="images/icon3.gif" alt="" /></a></li>
+    </ul>
+  </div>
+  <div class="row-2">
+    <ul>
+      <li><a href="/" class="active">Главная</a></li>
+      <li><a href="/about">О сайте</a></li>
+      <li><a href="/films">Фильмы</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+      <li class="last"><a href="/maintenance">Содержание</a></li>
+    </ul>
+  </div>
+</div>
+@endsection
+@section('content')
 <!-- основа -->
 			<div id="content"><div class="ic"></div>
 			<div id="slogan">
@@ -70,3 +74,4 @@
 			</div>
 </body>
 </html>
+@endsection
