@@ -21,3 +21,4 @@ Route::get('/film2','ApiController@film2Action' );
 Route::get('/film3','ApiController@film3Action' );
 Route::get('/contacts','ApiController@contactsAction' );
 Route::get('/maintenance','ApiController@maintenanceAction' );
+Route::get('/getarticle','ApiController@getArticle' );

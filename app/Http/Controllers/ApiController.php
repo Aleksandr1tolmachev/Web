@@ -37,4 +37,8 @@ class ApiController extends Controller
   {
     return view('contacts');
   }
+  public function getArticle(Request $request)
+  {
+    return (new ArticleController())->show() ;
+  }
 }
