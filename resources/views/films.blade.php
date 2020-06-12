@@ -16,7 +16,7 @@
 		<ul>
 			<li><a href="/"><img src="images/icon1.gif" alt="" /></a></li>
 			<li><a href="/contacts"><img src="images/icon2.gif" alt="" /></a></li>
-			<li><a href="/maintenance"><img src="images/icon3.gif" alt="" /></a></li>
+		  <li><a href="/register"><img src="images/icon3.gif" alt="" /></a></li>
 		</ul>
 	</div>
 	<div class="row-2">

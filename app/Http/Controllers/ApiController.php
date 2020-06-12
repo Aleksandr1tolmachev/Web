@@ -41,4 +41,12 @@ class ApiController extends Controller
   {
     return (new ArticleController())->show() ;
   }
+  public function registerAction(Request $request)
+  {
+    return view('register');
+  }
+  public function loginAction(Request $request)
+  {
+    return view('login');
+  }
 }
