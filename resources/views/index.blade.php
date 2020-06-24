@@ -43,21 +43,13 @@
 				<div class="content">
 					<h3>Свежие<span> Фильмы</span></h3>
 					<ul class="movies">
+						@foreach ($films as $film)
 						<li>
-							<h4>Бладшот</h4><img src="images/1page-img2.png" alt="Картинка не найдена" />
-							<p>Настоящее имя – Рэй Гаррисон.Морской пехотинец, погибший вместе с женой,а затем вернувшийся к жизни благодаря технологиям компании «Возрождение души».</p>
-							<div class="wrapper"><a href="/film1" class="link2"><span><span>Читать больше</span></span></a></div>
+							<h4>{{$film->title}}</h4><img src="{{$film->URL_img}}" alt="Картинка не найдена" />
+							<p>{{$film->description_short}}</p>
+							<div class="wrapper"><a href="{{$film->link}}" class="link2"><span><span>Читать больше</span></span></a></div>
 						</li>
-						<li>
-							<h4>Соник в кино</h4><img src="images/1page-img3.png" alt="Картинка не найдена" />
-							<p>Соник — внеземной синий ёж, способный бегать со сверхзвуковой скоростью.</p>
-							<div class="wrapper"><a href="/film2" class="link2"><span><span>Читать больше</span></span></a></div>
-						</li>
-						<li class="last">
-							<h4>Хищные птицы: Потрясающая история Харли Квинн</h4><img src="images/1page-img4.png" alt="Картинка не найдена" />
-							<p>Героями фильма «Хищные птицы» стали несколько юных особ, чьей отважности и смелости можно только позавидовать. Четыре девушки нашли в себе ресурсы выступить против главы преступного мира и оказать ему сопротивление.</p>
-							<div class="wrapper"><a href="/film3" class="link2"><span><span>Читать больше</span></span></a></div>
-						</li>
+							@endforeach
 						<li class="clear">&nbsp;</li>
 					</ul>
 				</div>

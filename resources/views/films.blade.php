@@ -3,6 +3,7 @@
 <head>
 <title>Фильмы</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
+<link href="style1.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="page3">
 <div class="tail-top">
@@ -38,8 +39,12 @@
 					<div class="border-right">
 						<div class="border-left">
 							<div class="inner">
-								<h3></h3>
-								<p>В данном разделе вы можете найти инфомацию о фильмах</p>
+								<h3><p>В данном разделе вы можете найти инфомацию о фильмах</p></h3>
+									<div class="form">
+								<form method="get" action="/search" id="search_form">
+									<input type="search" name="search_field" placeholder="Введите название фильма"/>
+								  <button>Искать</button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -47,15 +52,11 @@
 				<div class="content">
 					<h3>Фильмы </span></h3>
 					<ul class="list">
-						<li><a href="/film1"><img src="images/1page-img2.png" alt="" /><a href="/film1">Бладшот</a><br />
-					Настоящее имя – Рэй Гаррисон.Морской пехотинец, погибший вместе с женой,а затем вернувшийся к жизни благодаря технологиям компании «Возрождение души».<br />
+						@foreach ($films as $film)
+						<li><a href="{{$film->link}}"><img src="{{$film->URL_img}}" alt="" /><a href="/film1">{{$film->title}}</a><br />
+					{{$film->description}}<br />
 					</li>
-						<li><a href="/film2"><img src="images/1page-img3.png" alt="" /><a href="/film2">Соник в кино</a><br />
-					Соник — внеземной синий ёж, способный бегать со сверхзвуковой скоростью.<br />
-						</li>
-						<li><a href="/film3"><img src="images/1page-img4.png" alt="" /><a href="/film3">Хищные птицы: Потрясающая история Харли Квинн</a><br />
-				Героями фильма «Хищные птицы» стали несколько юных особ, чьей отважности и смелости можно только позавидовать. Четыре девушки нашли в себе ресурсы выступить против главы преступного мира и оказать ему сопротивление.<br />
-						</li>
+						@endforeach
 					</ul>
 				</div>
 			</div>

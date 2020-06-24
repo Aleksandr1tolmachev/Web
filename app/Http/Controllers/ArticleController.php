@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Article;
 use Illuminate\Http\Request;
-use app\Article;
+
 class ArticleController extends Controller
 {
     public function show()
     {
-      return Article::all();
+    	return Article::all();
     }
-
+    public function search($title)
+    {
+      return Article::where('title','like', '%'.$title.'%')->get();
+    }
 }
