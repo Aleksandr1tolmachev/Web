@@ -23,8 +23,9 @@ class AuthController extends Controller
     }
     public function reg(Request $request){
   $user = User::where('email_address', $request->email_address)->get();
-      if (is_null($user)){
-        return "Данный E-mail уже используется";}
+      if (!is_null($user)){
+        return "Данный E-mail уже используется";
+      }
       $user = User::create([
         'login'=>$request->login,
         'email_address'=>$request->email_address,
